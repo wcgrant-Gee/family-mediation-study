@@ -1,2 +1,2 @@
-# Mediation-Family-Training
-A Study Guide for Mediation for Family Training
+# family-mediation-study
+A Study Guide for Family Mediation Training
