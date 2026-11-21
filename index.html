@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Family Mediation Study</title>
+  <meta name="description" content="Personal study app for Texas family mediation training: seven modules, practice cases, and quizzes.">
+  <meta name="theme-color" content="#1D4E5A">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mediation Study">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn" id="backBtn" aria-label="Back" hidden>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <a class="brand" href="#/">Mediation Study</a>
+    <button class="icon-btn" id="settingsBtn" aria-label="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="7" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="17" r="2.2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+  </header>
+  <main id="app" tabindex="-1" aria-live="polite">
+    <p class="loading">Loading…</p>
+  </main>
+  <nav class="tabbar" aria-label="Main">
+    <a href="#/" data-tab="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11l8-7 8 7v9h-5v-6H9v6H4z" fill="currentColor"/></svg><span>Home</span></a>
+    <a href="#/quizzes" data-tab="quizzes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zm0 14.5a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zm1.3-5.1v.9h-2.4v-1.5c0-1.2 1.9-1.6 1.9-2.6 0-.6-.5-1-1.2-1-.8 0-1.3.5-1.4 1.2L8 9.1C8.3 7.4 9.8 6.4 11.7 6.4c2 0 3.4 1.1 3.4 2.8 0 1.7-1.5 2.3-1.8 3.2z" fill="currentColor"/></svg><span>Quizzes</span></a>
+    <a href="#/library" data-tab="library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4v16H5zM10.5 4h4v16h-4zM16 5.2l3.8-1 3.2 15-3.8 1z" fill="currentColor"/></svg><span>Library</span></a>
+    <a href="#/report" data-tab="report"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.4-8 11-4.6-1.6-8-6-8-11V5z" fill="currentColor"/></svg><span>Reporting</span></a>
+  </nav>
+  <div id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet-card">
+      <h2 id="sheetTitle"></h2>
+      <div id="sheetBody"></div>
+      <button class="btn" id="sheetClose">Close</button>
+    </div>
+  </div>
+  <div id="toast" class="toast" hidden></div>
+  <noscript><p class="loading">This study app needs JavaScript turned on.</p></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>
